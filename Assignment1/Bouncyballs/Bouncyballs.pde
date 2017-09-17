@@ -1,4 +1,4 @@
-int numBalls = 12;
+int numBalls = 50;
 float spring = 0.05;
 float gravity = 0.03;
 float friction = -0.9;
@@ -40,7 +40,8 @@ class Ball {
   } 
   
   void collide() {
-    for (int i = id + 1; i < numBalls; i++) {
+    for (int i = id + 1; i < numBalls; i++) { 
+      
       float dx = others[i].x - x;
       float dy = others[i].y - y;
       float distance = sqrt(dx*dx + dy*dy);
